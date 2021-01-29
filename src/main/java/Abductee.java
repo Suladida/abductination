@@ -12,4 +12,8 @@ public class Abductee {
     public String getSpecies() {
         return species;
     }
+
+    public int getmealMass() {
+        return mealMass;
+    }
 }

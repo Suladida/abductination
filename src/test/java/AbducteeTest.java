@@ -17,4 +17,9 @@ public class AbducteeTest {
         assertEquals("Human", abductee.getSpecies());
     }
 
+    @Test
+    public void abducteeHasmealMass(){
+        assertEquals(10, abductee.getmealMass());
+    }
+
 }
