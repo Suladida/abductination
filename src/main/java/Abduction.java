@@ -7,18 +7,20 @@ public class Abduction {
 
     ArrayList<Abductee> abductees;
     Spacecraft spacecraft;
-    int abductionID;
+    int abdID;
+    String captain;
     String planet;
     String destination;
     int space;
     int capacity;
 
-    public Abduction(Spacecraft spacecraft, int abdID, String planet, String destination){
+    public Abduction(Spacecraft spacecraft, int abductionID, String captain, String planet, String destination){
         this.spacecraft = spacecraft;
         this.capacity = spacecraft.getCapacity();
         this.abductees = new ArrayList<Abductee>();
         this.space = (capacity - abductees.size());
-        this.abductionID = abdID;
+        this.abdID = abductionID;
+        this.captain = captain;
         this.planet = planet;
         this.destination = destination;
     }
@@ -28,7 +30,11 @@ public class Abduction {
     }
 
     public int getID() {
-        return abductionID;
+        return abdID;
+    }
+
+    public String getCaptain(){
+        return captain;
     }
 
     public String getPlanet(){

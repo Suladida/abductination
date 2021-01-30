@@ -22,8 +22,8 @@ public class AbductionTest {
         abductee2 = new Abductee("Omecronian", 100);
         spacecraft = Spacecraft.NIMBUS;
         spacecraft2 = Spacecraft.SCOOTY_PUFF_JR;
-        abduction = new Abduction(spacecraft, 001, "Earth", "Planet Slurm");
-        abduction2 = new Abduction(spacecraft2, 002, "Omecron Percei 8", "Ukknown");
+        abduction = new Abduction(spacecraft,  001, "Zapp Brannagin","Earth", "Planet Slurm");
+        abduction2 = new Abduction(spacecraft2, 002, "Phillip J Fry", "Omecron Percei 8", "Ukknown");
         abductees = new ArrayList<Abductee>();
     }
 
@@ -45,6 +45,11 @@ public class AbductionTest {
     @Test
     public void abductionHasID(){
         assertEquals(001, abduction.getID());
+    }
+
+    @Test
+    public void abductionHasCaptain(){
+        assertEquals("Zapp Brannagin", abduction.getCaptain());
     }
 
     @Test
