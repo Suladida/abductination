@@ -9,12 +9,14 @@ public class Abduction {
     Spacecraft spacecraft;
     int abductionID;
     String planet;
+    String destination;
 
-    public Abduction(Spacecraft spacecraft, int abdID, String planet){
+    public Abduction(Spacecraft spacecraft, int abdID, String planet, String destination){
         this.spacecraft = spacecraft;
         this.abductees = new ArrayList<Abductee>();
         this.abductionID = abdID;
         this.planet = planet;
+        this.destination = destination;
     }
 
     public ArrayList<Abductee> getAbductees(){
@@ -31,6 +33,10 @@ public class Abduction {
 
     public String getPlanet(){
         return planet;
+    }
+
+    public String getDestination(){
+        return destination;
     }
 }
 

@@ -22,10 +22,6 @@ public enum Spacecraft {
         return level;
     }
 
-    public int getMaxCells(){
-        return maxCells;
-    }
-
     public int getMaxMeals(){
         return maxMeals;
     }
