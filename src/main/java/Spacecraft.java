@@ -1,3 +1,5 @@
+import static java.lang.System.*;
+
 public enum Spacecraft {
 
     MOTHERSHIP(1, 1000, 10000),
@@ -17,6 +19,7 @@ public enum Spacecraft {
     }
 
     public int getLevel(){
+        System.out.println(level);
         return level;
     }
 

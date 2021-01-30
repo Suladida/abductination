@@ -12,6 +12,7 @@ public class Abduction {
     public Abduction(Spacecraft spacecraft, Abductee abductee){
         this.abductee = abductee;
         this.spacecraft = spacecraft;
+        this.abductees = new ArrayList<Abductee>();
     }
 
     public ArrayList<Abductee> getAbductees(){
