@@ -8,7 +8,6 @@ public class Abduction {
     ArrayList<Abductee> abductees;
     Abductee abductee;
     Spacecraft spacecraft;
-    Abduction abduction;
 
     public Abduction(Spacecraft spacecraft, Abductee abductee){
         this.abductee = abductee;
