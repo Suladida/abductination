@@ -98,6 +98,12 @@ public class AbductionTest {
         assertEquals(0, abduction.totalAbductees());
     }
 
+    @Test
+    public void canAbductOne_True(){
+        abduction.abduct(abductee);
+        assertEquals(1, abduction.totalAbductees());
+    }
+
     /**
      *     Return the number of available cells
      *     maxCells - abductees.size()

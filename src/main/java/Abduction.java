@@ -23,10 +23,6 @@ public class Abduction {
         this.destination = destination;
     }
 
-    public ArrayList<Abductee> getAbductees(){
-        return abductees;
-    }
-
     public int totalAbductees(){
         return abductees.size();
     }
