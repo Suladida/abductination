@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,7 +16,7 @@ public class AbductionTest {
     @Before
     public void before(){
         abductee = new Abductee("Human", 10);
-        abduction = new Abduction(Spacecraft.NIMBUS, abductee);
+        abduction = new Abduction(Spacecraft.NIMBUS, 001);
         spacecraft = Spacecraft.NIMBUS;
         abductees = new ArrayList<Abductee>();
     }
@@ -36,12 +37,25 @@ public class AbductionTest {
     }
 
     @Test
-    public void canAbduct(){
+    public void abductionHasID(){
+        assertEquals(001, abduction.getID());
+    }
+
+    @Test
+    public void abductionStartsEmpty(){
+        assertEquals(0, abduction.totalAbductees());
+    }
+
+    @Test
+    public void canCountAbductees(){
+        abductees.add(abductee);
+        Assert.assertEquals(1, abductees.size());
+    }
+
+    @Test
+    public void canAddAbducteeToAbductees(){
         abductees.add(abductee);
         assertEquals(1, abductees.size());
     }
-
-
-
 
 }
