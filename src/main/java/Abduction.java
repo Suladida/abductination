@@ -10,10 +10,14 @@ public class Abduction {
     int abductionID;
     String planet;
     String destination;
+    int space;
+    int capacity;
 
     public Abduction(Spacecraft spacecraft, int abdID, String planet, String destination){
         this.spacecraft = spacecraft;
+        this.capacity = spacecraft.getCapacity();
         this.abductees = new ArrayList<Abductee>();
+        this.space = capacity - abductees.size();
         this.abductionID = abdID;
         this.planet = planet;
         this.destination = destination;
@@ -38,5 +42,9 @@ public class Abduction {
     public String getDestination(){
         return destination;
     }
-}
+
+    public int getSpace(){
+        space = (capacity - totalAbductees());
+        return space;
+        }}
 

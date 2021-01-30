@@ -9,6 +9,7 @@ public class AbducteeTest {
 
     @Before
     public void before(){
+
         abductee = new Abductee("Human", 10);
     }
 
