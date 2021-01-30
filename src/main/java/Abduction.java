@@ -29,6 +29,10 @@ public class Abduction {
         return abductees.size();
     }
 
+    public Spacecraft getSpacecraft(){
+        return spacecraft;
+    }
+
     public int getID() {
         return abdID;
     }
