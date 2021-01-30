@@ -28,11 +28,6 @@ public class AbductionTest {
     }
 
     @Test
-    public void spacecraftHasCaptain(){
-        assertEquals("Zapp Brannigan", spacecraft.getCaptain());
-    }
-
-    @Test
     public void spacecraftHasLevel(){
         assertEquals(3, spacecraft.getLevel());
     }
