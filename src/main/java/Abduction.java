@@ -48,14 +48,19 @@ public class Abduction {
         return space;
         }
 
-    public void addAbductees(ArrayList<Abductee> abductees1){
-        abductees.addAll(abductees1);
+    public void abduct(Abductee abductee){
+        if (space >= 1){
+            abductees.add(abductee);
+            System.out.println("One Abducted!");
+        } else {
+        System.out.println("Sorry, we couldn't possibly eat another one.");}
     }
 
     public void abduct(ArrayList<Abductee> abductees1){
         if (space >= abductees1.size()){
             abductees.addAll(abductees1);
-        }
+            System.out.println("All Abducted!");
+        } else {System.out.println("Cells are full!");}
     }
 
 

@@ -68,12 +68,7 @@ public class AbductionTest {
     }
 
     @Test
-    public void canGetSpace_empty(){
-        assertEquals(50, abduction.getSpace());
-    }
-
-    @Test
-    public void canGetSpace_full(){
+    public void canGetRemainingSpace(){
         abduction.abductees.add(abductee);
         abduction.abductees.add(abductee2);
         assertEquals(48, abduction.getSpace());
@@ -87,14 +82,20 @@ public class AbductionTest {
 
     @Test
     public void canAbduct_True(){
-        // if spacecraft capacity - abduction abductees.size() >= abduction abductees
-        // add the abduction abductees to the spacecraft abductees
         ArrayList<Abductee> newAbductees = new ArrayList<Abductee>();
         newAbductees.add(abductee);
         newAbductees.add(abductee2);
         abduction.abduct(newAbductees);
-//        abduction2.abduct(abductee2);
         assertEquals(2, abduction.totalAbductees());
+    }
+
+    @Test
+    public void canAbduct_False(){
+        ArrayList<Abductee> newAbductees = new ArrayList<Abductee>();
+        newAbductees.add(abductee);
+        newAbductees.add(abductee2);
+        abduction2.abduct(newAbductees);
+        assertEquals(0, abduction.totalAbductees());
     }
 
     /**
