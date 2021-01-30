@@ -81,7 +81,7 @@ public class AbductionTest {
     }
 
     @Test
-    public void canAbduct_True(){
+    public void canAbduct(){
         ArrayList<Abductee> newAbductees = new ArrayList<Abductee>();
         newAbductees.add(abductee);
         newAbductees.add(abductee2);
@@ -90,7 +90,7 @@ public class AbductionTest {
     }
 
     @Test
-    public void canAbduct_False(){
+    public void cannotAbduct(){
         ArrayList<Abductee> newAbductees = new ArrayList<Abductee>();
         newAbductees.add(abductee);
         newAbductees.add(abductee2);
@@ -99,23 +99,16 @@ public class AbductionTest {
     }
 
     @Test
-    public void canAbductOne_True(){
-        abduction.abduct(abductee);
-        assertEquals(1, abduction.totalAbductees());
+    public void canAbductOne(){
+        abduction2.abduct(abductee);
+        assertEquals(1, abduction2.totalAbductees());
     }
 
-    /**
-     *     Return the number of available cells
-     *     maxCells - abductees.size()
-     *
-     *     if maxCells >= abductees.size(){
-     *         voyage.abductees.add(abductees);
-     *     }
-     *     break;
-     *     count the array of abductees
-     *
-     *     if c
-     *
-     *
-      */
+    @Test
+    public void cannotAbductOne(){
+    abduction2.abduct(abductee2);
+    abduction2.abduct(abductee);
+    assertEquals(1, abduction2.totalAbductees());
+}
+
 }

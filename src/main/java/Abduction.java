@@ -17,7 +17,7 @@ public class Abduction {
         this.spacecraft = spacecraft;
         this.capacity = spacecraft.getCapacity();
         this.abductees = new ArrayList<Abductee>();
-        this.space = capacity - abductees.size();
+        this.space = (capacity - abductees.size());
         this.abductionID = abdID;
         this.planet = planet;
         this.destination = destination;
@@ -45,6 +45,7 @@ public class Abduction {
         }
 
     public void abduct(Abductee abductee){
+        space = (capacity - totalAbductees());
         if (space >= 1){
             abductees.add(abductee);
             System.out.println("One Abducted!");
@@ -53,6 +54,7 @@ public class Abduction {
     }
 
     public void abduct(ArrayList<Abductee> abductees1){
+        space = (capacity - totalAbductees());
         if (space >= abductees1.size()){
             abductees.addAll(abductees1);
             System.out.println("All Abducted!");
