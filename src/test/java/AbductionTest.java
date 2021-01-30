@@ -16,7 +16,7 @@ public class AbductionTest {
     @Before
     public void before(){
         abductee = new Abductee("Human", 10);
-        abduction = new Abduction(Spacecraft.NIMBUS, 001);
+        abduction = new Abduction(Spacecraft.NIMBUS, 001, "Earth");
         spacecraft = Spacecraft.NIMBUS;
         abductees = new ArrayList<Abductee>();
     }
@@ -39,6 +39,11 @@ public class AbductionTest {
     @Test
     public void abductionHasID(){
         assertEquals(001, abduction.getID());
+    }
+
+    @Test
+    public void abductionHasPlanet(){
+        assertEquals("Earth", abduction.getPlanet());
     }
 
     @Test

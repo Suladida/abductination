@@ -19,7 +19,6 @@ public enum Spacecraft {
     }
 
     public int getLevel(){
-        System.out.println(level);
         return level;
     }
 
