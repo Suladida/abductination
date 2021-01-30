@@ -46,5 +46,23 @@ public class Abduction {
     public int getSpace(){
         space = (capacity - totalAbductees());
         return space;
-        }}
+        }
+
+    public void addAbductees(ArrayList<Abductee> abductees1){
+        abductees.addAll(abductees1);
+    }
+
+    public void abduct(ArrayList<Abductee> abductees1){
+        if (space >= abductees1.size()){
+            abductees.addAll(abductees1);
+        }
+    }
+
+
+
+
+
+}
+
+
 

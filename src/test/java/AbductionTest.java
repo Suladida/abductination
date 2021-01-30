@@ -86,11 +86,15 @@ public class AbductionTest {
     }
 
     @Test
-    public void canAddAbducteeToAbductees(){
+    public void canAbduct_True(){
         // if spacecraft capacity - abduction abductees.size() >= abduction abductees
         // add the abduction abductees to the spacecraft abductees
-        abductees.add(abductee);
-        assertEquals(1, abductees.size());
+        ArrayList<Abductee> newAbductees = new ArrayList<Abductee>();
+        newAbductees.add(abductee);
+        newAbductees.add(abductee2);
+        abduction.abduct(newAbductees);
+//        abduction2.abduct(abductee2);
+        assertEquals(2, abduction.totalAbductees());
     }
 
     /**
