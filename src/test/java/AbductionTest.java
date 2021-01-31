@@ -110,23 +110,5 @@ public class AbductionTest {
     abduction2.abduct(abductee);
     assertEquals(1, abduction2.totalAbductees());
 }
-//    @Test
-//    public void canChumAll(){
-//        abduction2.abduct(abductee);
-//        abduction2.chumAll();
-//        assertEquals(0, abduction2.totalAbductees());
-//        assertEquals(1, abduction2.pantryStock());
-//    }
-
-//    @Test
-//    public void canChumArray(){
-//        ArrayList<Abductee> newAbductees = new ArrayList<Abductee>();
-//        newAbductees.add(abductee);
-//        newAbductees.add(abductee2);
-//        abduction.abduct(newAbductees);
-//        abduction.chumAll();
-//        assertEquals(0, abduction.totalAbductees());
-//        assertEquals(2, abduction.pantryStock());
-//    }
 
 }
