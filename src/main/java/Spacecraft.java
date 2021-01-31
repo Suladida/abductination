@@ -6,8 +6,8 @@ public enum Spacecraft {
     VOYAGER(2,100,2000),
     NIMBUS(3, 50,1000),
     FIREFLY(4,25,150),
-    PLANETEXPRESS( 5,10,50),
-    SCOOTY_PUFF_JR(1000, 1, 0);
+    PLANETEXPRESS( 5,10,1),
+    SCOOTY_PUFF_JR(1000, 1, 1);
 
     private final int level;
     private final int maxCapacity;

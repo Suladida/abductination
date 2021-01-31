@@ -84,11 +84,15 @@ public class Abduction {
 
 
     public void chumAll() {
-        pantry.addAll(abductees);
-        abductees.clear();
-        System.out.println("All abductees chummed! Nom nom nom 💆‍♂️🍽");
+//        NEXT:  add individual chums via a loop, so abductees that can be chummed will be.
+
+        if (pantrySpace >= totalAbductees()){
+            pantry.addAll(abductees);
+            abductees.clear();
+            System.out.println("All abductees chummed! Nom nom nom 💆‍♂️🍽");
+        } else { System.out.println("Eat what you have, you greedy bugger! 🍽⛔️ The pantry can only hold " + pantrySize + " meals.");
     }
-}
+}}
 
 
 
