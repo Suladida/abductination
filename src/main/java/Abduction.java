@@ -1,24 +1,27 @@
 import java.util.ArrayList;
 
-// Add in launch ID, etc.
-
 public class Abduction {
 
-
     ArrayList<Abductee> abductees;
+    ArrayList<Abductee> pantry;
     Spacecraft spacecraft;
     int abdID;
     String captain;
     String planet;
     String destination;
     int space;
+    int pantrySpace;
     int capacity;
+    int pantrySize;
 
     public Abduction(Spacecraft spacecraft, int abductionID, String captain, String planet, String destination){
         this.spacecraft = spacecraft;
         this.capacity = spacecraft.getCapacity();
+        this.pantrySize = spacecraft.getPantrySize();
         this.abductees = new ArrayList<Abductee>();
         this.space = (capacity - abductees.size());
+        this.pantry = new ArrayList<Abductee>();
+        this.pantrySpace = pantrySize - pantry.size();
         this.abdID = abductionID;
         this.captain = captain;
         this.planet = planet;
@@ -54,6 +57,10 @@ public class Abduction {
         return space;
         }
 
+    public int getPantrySpace(){
+    return pantrySpace;
+    }
+
     public void abduct(Abductee abductee){
         space = (capacity - totalAbductees());
         if (space >= 1){
@@ -71,10 +78,16 @@ public class Abduction {
         } else {System.out.println("Cells are full!");}
     }
 
+    public int pantryStock(){
+        return pantry.size();
+    }
 
 
-
-
+    public void chumAll() {
+        pantry.addAll(abductees);
+        abductees.clear();
+        System.out.println("All abductees chummed! Nom nom nom 💆‍♂️🍽");
+    }
 }
 
 

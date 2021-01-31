@@ -11,20 +11,20 @@ public enum Spacecraft {
 
     private final int level;
     private final int maxCapacity;
-    private final int maxMeals;
+    private final int pantrySize;
 
-    Spacecraft(int level, int maxCapacity, int maxMeals){
+    Spacecraft(int level, int maxCapacity, int pantrySize){
         this.level = level;
         this.maxCapacity = maxCapacity;
-        this.maxMeals = maxMeals;
+        this.pantrySize = pantrySize;
     }
 
     public int getLevel(){
         return level;
     }
 
-    public int getMaxMeals(){
-        return maxMeals;
+    public int getPantrySize(){
+        return pantrySize;
     }
 
     public int getCapacity() {
